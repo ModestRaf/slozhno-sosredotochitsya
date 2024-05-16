@@ -1,5 +1,120 @@
-/* Основные стили проекта. Это стили для темы, которую вы верстаете первой. */
-
 .page {
-  /* сохраните в разметке и стилях класс page. На его основе работает скрипт. */
+    font-family: IBM Plex Mono, sans-serif;
+    max-width: 375px;
+    width: 100%;
+    margin: auto;
+    padding: 0 10px 0 10px;
+    background: url("../images/cover-image-dark.png") fixed no-repeat;
+    background-size: cover;
+}
+
+.header {
+    position: relative;
+    display: grid;
+    grid-template-rows: 228px 192px auto;
+    min-height: 668px;
+    padding: 10px 0 10px 0;
+}
+
+.decorated-zone::before {
+    border: 1px solid #FF0070;
+    border-bottom: none;
+    border-left: none;
+    box-sizing: border-box;
+    content: "";
+    height: 25px;
+    right: 0;
+    position: absolute;
+    top: 10px;
+    width: 25px;
+}
+
+.decorated-zone::after {
+    border: 1px solid #FF0070;
+    border-top: none;
+    border-right: none;
+    box-sizing: border-box;
+    content: "";
+    height: 25px;
+    position: absolute;
+    bottom: 10px;
+    width: 25px;
+}
+
+.header-decoration {
+    position: absolute;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 25px;
+    text-align: center;
+    color: #FF0070;
+    top: 10px;
+    right: 28px;
+}
+
+.header-decoration::after {
+    content: "";
+    position: absolute;
+    height: 9px;
+    width: 9px;
+    border-radius: 50%;
+    background-color: #FF0070;
+    box-shadow: 0 0 4px 2px #FF0070;
+    top: 8px;
+    right: -19px;
+}
+
+.header__theme-menu {
+    align-self: center;
+    justify-self: flex-end;
+}
+
+.header__theme-menu-list {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.header__theme-menu-button {
+    width: 70px;
+    height: 26px;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 18px;
+    text-align: center;
+    text-transform: lowercase;
+    background: transparent;
+    border: none;
+    cursor: pointer;
+    color: #FF0070;
+}
+
+.header__title {
+    font-size: 116px;
+    font-weight: 700;
+    line-height: 95px;
+    text-align: left;
+    color: #DB00FF;
+    text-shadow: 4px 4px 0 #FF0070;
+}
+
+.header__text {
+    align-self: center;
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 23px;
+    text-align: left;
+    background-color: #FF0070;
+    color: #000028;;
+}
+
+.pictures__gallery {
+    display: grid;
+    grid-template-rows: auto auto auto auto auto;
+    gap: 10px;
+}
+
+.gallery-picture {
+    max-width: 375px;
+    width: 100%;
 }
