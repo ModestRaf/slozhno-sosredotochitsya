@@ -1,6 +1,4 @@
 .page {
-    max-width: 375px;
-    width: 100%;
     margin: auto;
     padding: 0 10px 0 10px;
     background: url("../images/cover-image-dark.png") fixed no-repeat;
@@ -184,13 +182,13 @@
 
 .pictures__gallery {
     display: grid;
-    grid-template-rows: auto auto auto auto auto;
+    grid-template-rows: repeat(auto-fill, auto);
     gap: 10px;
     padding-top: 10px;
 }
 
 .gallery-picture {
-    max-width: 375px;
+    min-width: 375px;
     width: 100%;
 }
 
@@ -304,8 +302,8 @@
 
     .pictures__gallery {
         display: grid;
-        grid-template-rows: 192px 230px auto;
-        grid-template-columns: 229px 230px auto;
+        grid-template-rows: minmax(192px, auto) minmax(230px, auto) minmax(318px, auto);
+        grid-template-columns: minmax(229px, auto) minmax(230px, auto) minmax(229px, auto);
         gap: 20px;
         max-width: inherit;
         width: 100%;
@@ -322,6 +320,7 @@
 
     .img-ice-cream {
         object-fit: cover;
+        object-position: center;
         min-height: 441px;
         grid-column-start: 3;
         grid-column-end: 4;
@@ -331,6 +330,7 @@
 
     .img-tape {
         object-fit: cover;
+        object-position: center;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
@@ -355,7 +355,7 @@
     }
 
     .gallery-picture {
-        max-width: none;
+        min-width: inherit;
     }
 
     .footer {
@@ -447,13 +447,13 @@
     .causes {
         display: grid;
         grid-template-rows: 47px auto;
-        grid-template-columns: repeat(3, 315px);
+        grid-template-columns: repeat(3, minmax(315px, auto));
         gap: 20px;
     }
 
     .causes__title {
         grid-column-start: 1;
-        grid-column-end: 4;
+        grid-column-end: max;
         max-width: 315px;
         width: 100%;
     }
@@ -471,10 +471,10 @@
 
     .pictures__gallery {
         display: grid;
-        grid-template-rows: 260px 315px auto;
-        grid-template-columns: repeat(3, 315px);
+        grid-template-rows: minmax(260px, auto) minmax(315px, auto) minmax(428px, auto);
+        grid-template-columns: repeat(3, minmax(315px, auto));
         gap: 20px;
-        max-width: inherit;
+        max-width: 1440px;
         width: 100%;
         padding-top: 20px;
     }
@@ -489,6 +489,7 @@
 
     .img-ice-cream {
         object-fit: cover;
+        object-position: center;
         min-height: 595px;
         grid-column-start: 3;
         grid-column-end: 4;
@@ -498,6 +499,7 @@
 
     .img-tape {
         object-fit: cover;
+        object-position: center;
         grid-column-start: 1;
         grid-column-end: 2;
         grid-row-start: 2;
@@ -522,7 +524,7 @@
     }
 
     .gallery-picture {
-        max-width: none;
+        min-width: inherit;
     }
 
     .footer {
