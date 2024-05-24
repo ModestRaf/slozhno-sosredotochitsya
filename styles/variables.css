@@ -3,9 +3,10 @@
     --text-color: #F1B2CE;
     --border-color-hover: rgba(255, 0, 112, 0.4);
     --title-color: #000028;
-    --big-title-color: #FF0070;
     --shadow-color: #DB00FF;
-    --button-color: #FF0070;
-    --corner-decor: #FF0070;
     --header-decor: #FF0070;
+    --corner-button-bigtitle-color: #FF0070;
+    --background-color: #000028;
+    --img-background: url("../images/cover-image-dark.png") fixed no-repeat;
+    --fonts: "IBM Plex Mono";
 }
